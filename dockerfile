@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 copy . . 
 
-CMD 
+CMD ["python", "-m","uvicorn", "main:app", "--reload", "--port", "8080"]
