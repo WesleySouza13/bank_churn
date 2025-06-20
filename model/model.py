@@ -10,10 +10,11 @@ import pandas as pd
 import numpy as np 
 import joblib
 df = pd.read_csv('C:\\Users\\souza\\Downloads\\churnML\\data\\Bank Customer Churn Prediction.csv')
+x = df.drop('customer_id', axis=1)
 x = df.drop('churn', axis=1)
 y = df['churn']
 
-
+print(x)
 cat_atribs = ['country', 'gender']
 num_atribs = ['credit_score', 'age', 'tenure', 'balance', 'products_number',
     'credit_card', 'active_member', 'estimated_salary']
@@ -55,6 +56,7 @@ print(f'metricas: acuracia: {acc} precision: {precision} recall {recall}')
 
 
 # salvando o modelo 
-modelo_save = pipe.set_params(model=model)
+modelo_save = pipe
 modelo_save
 joblib.dump(modelo_save, 'modelo_gradientBoosting.pkl')
+
