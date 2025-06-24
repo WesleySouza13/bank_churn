@@ -8,8 +8,8 @@ model = joblib.load('modelo_gradientBoosting.pkl')
 print(type(model))
 class modelinput(BaseModel):
     credit_score: int
-    country:object
-    gender:object
+    country:str
+    gender:str
     age:int
     tenure:int
     balance:float
@@ -17,7 +17,7 @@ class modelinput(BaseModel):
     credit_card:int
     active_member:int
     estimated_salary:float
-    level_score: object
+    level_score: str
 @app.get('/')
 def home():
     return {'api para previsao de churn - modelo de gradientBoosting. Criado por Wesley Matos no dia 20/06/2025'}
