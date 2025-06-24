@@ -21,19 +21,18 @@ class ModelInput(BaseModel):
     level_score: str
 @app.get('/')
 def home():
+    
     return {'api para previsao de churn - modelo de gradientBoosting. Criado por Wesley Matos no dia 20/06/2025'}
-@app.post('/inference')
+@app.post('/predict')
 def predict(data: ModelInput):
     if model is None:
         return {'o modelo nao se enconta ou nao foi reconhecido'}
     try:
-        input = data.model_dump()
-        data_f = pd.DataFrame([input])
-        
-        #input_array = np.array([[data.credit_score, data.age, data.country, data.gender, data.tenure, data.balance,
-                                #data.products_number, data.credit_card, data.active_member, data.estimated_salary, data.level_score]])
+        input_data = data.model_dump()
+        data_f = pd.DataFrame([input_data])
         predict = model.predict(data_f)
-        return {f'prediçao: {int(predict[0])}'}
+        pred_proba = model.predict_proba(data_f)[:,1]
+        return {f'prediçao: {int(predict[0])} e probabilidade de {float(pred_proba[0])*100:.2f}% para churn'}
     except Exception as e:
         return {f'ocorreu um erro :{str(e)}'}
     
