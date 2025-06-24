@@ -1,1 +1,2 @@
-![capa projeto churn ](https://github.com/user-attachments/assets/298bfc39-d9bd-4a32-9307-08712f44be26)
+
+![capachurn2](https://github.com/user-attachments/assets/64f585e9-246f-4147-8c13-59853454e316)
