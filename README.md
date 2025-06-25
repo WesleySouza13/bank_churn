@@ -20,20 +20,28 @@ A proposta contempla todas as etapas essenciais de um pipeline moderno de machin
 ## Estrutura do projeto 
 
 .
-├── data/                             
-├── model/
-│   ├── predict.py                   
-│   └── train.py                     
-├── notebook/
-│   └── jupyter_notebook.ipynb       
-├── venv/                             
-├── main.py                           
+├── data/                            
+│
+├── model/                          
+│   ├── train.py                    
+│   └── predict.py                  
+│
+├── notebook/                        
+│   └── jupyter_notebook.ipynb      
+│
+├── main.py                         
 ├── modelo_gradientBoost.pkl         
-├── requirements.txt                  
+│
+├── requirements.txt                 
+├── install.sh                      
+│
 ├── dockerfile                       
-├── install.sh                       
-├── .dockerignore
-├── .gitignore
-├── .pre-commit-config.yaml
-└── README.md                        
+├── .dockerignore                    
+│
+├── .gitignore                      
+├── .pre-commit-config.yaml          
+│
+├── README.md                        
+└── venv/                            
+                    
                    
