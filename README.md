@@ -86,7 +86,10 @@ Através desses experimentos, foi possível identificar que a técnica de Random
 
 ## Hiperparametros do modelo 
 Abaixo estão os hiperparâmetros utilizados após o uso do Optuna para busca das melhores configurações do modelo. 
+
 **Hiperparametros:**
+
+
 {
   'n_estimators': 117,
   'min_samples_split': 25,
