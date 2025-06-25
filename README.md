@@ -47,4 +47,35 @@ A proposta contempla todas as etapas essenciais de um pipeline moderno de machin
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+## Métricas do modelo 
+
+Primeiramente, foi realizado um estudo com diversos modelos de classificação. Em um primeiro momento, foram selecionados os três melhores modelos: Árvore de Decisão, LightGBM e Gradient Boosting.
+
+Abaixo está a curva ROC AUC dos modelos: 
+
+![image](https://github.com/user-attachments/assets/8128e8dd-6423-421b-8a43-ff3f3242fc85)
+
+Abaixo estão as métricas principais de cada um:
+
+| Modelo                | Acurácia | F1-Score | Recall | Precision | ROC AUC |
+| --------------------- | -------- | -------- | ------ | --------- | ------- |
+| **Random Forest**     | 0.8515   | 0.6077   | 0.5399 | 0.6949    | 0.7379  |
+| **Gradient Boosting** | 0.8055   | 0.6145   | 0.7277 | 0.5317    | 0.7771  |
+| **LightGBM**          | 0.8225   | 0.6243   | 0.6925 | 0.5684    | 0.7751  |
+
+Como estamos lidando com um problema de churn, o principal objetivo é identificar corretamente a maior quantidade possível de clientes que estão propensos a sair. Por esse motivo, foi dada prioridade à métrica de recall, que mede a capacidade do modelo em capturar os casos positivos.
+Dessa forma, o modelo escolhido para deploy foi o Gradient Boosting, por apresentar o melhor desempenho em recall entre os modelos avaliados.
+
+**Tratamento de classes desbalanceadas** 
+
+Para o tratamento do desbalanceamento de classes, foram realizados testes com diferentes estratégias, como RandomOversampling e RandomUndersampling.
+Através desses experimentos, foi possível identificar que a técnica de RandomOversampling proporcionou as melhores métricas de desempenho para o modelo selecionado (Gradient Boosting), especialmente no que diz respeito ao recall e ao F1-Score.
+
+
+
+
+
+
+
                    
