@@ -19,7 +19,7 @@ A proposta contempla todas as etapas essenciais de um pipeline moderno de machin
 
 ## Estrutura do projeto 
 
-
+.
 ├── data/                            
 ├── model/
 │   ├── predict.py                    
