@@ -56,10 +56,10 @@ Abaixo está a curva ROC AUC dos modelos:
 
 ![image](https://github.com/user-attachments/assets/8128e8dd-6423-421b-8a43-ff3f3242fc85)
 
-Abaixo estão as métricas principais de cada um:
+**Abaixo estão as métricas principais de cada um:**
 
-| Modelo 
-|(classe desbalanceada)       | Acurácia   | F1-Score   | Recall     | Precision | ROC AUC    |
+ 
+|(Modelo desbalanceado)       | Acurácia   | F1-Score   | Recall     | Precision | ROC AUC    |
 | --------------------------- | ---------- | ---------- | ---------- | --------- | ---------- |
 | **Random Forest**           | 0.7755     | 0.4869     | 0.5000     | 0.4744    | 0.6750     |
 | **Gradient Boosting**       | 0.8495     | 0.5541     | 0.4390     | 0.7510    | **0.8694** |
@@ -67,14 +67,13 @@ Abaixo estão as métricas principais de cada um:
 
 
 Como estamos lidando com um problema de churn, o principal objetivo é identificar corretamente a maior quantidade possível de clientes que estão propensos a sair. Por esse motivo, foi dada prioridade à métrica de recall, que mede a capacidade do modelo em capturar os casos positivos.
-Dessa forma, o modelo escolhido (por enquanto) para deploy foi o Gradient Boosting, por apresentar o melhor desempenho em recall entre os modelos avaliados.
 
 ## Tratamento de classes desbalanceadas
 
 Para o tratamento do desbalanceamento de classes, foram realizados testes com diferentes estratégias, como RandomOversampling e RandomUndersampling.
 Através desses experimentos, foi possível identificar que a técnica de RandomOversampling proporcionou as melhores métricas de desempenho para o modelo selecionado (Gradient Boosting), especialmente no que diz respeito ao recall e ao F1-Score.
 
-Abaixo estão as métricas pós Oversampling: 
+**Abaixo estão as métricas pós Oversampling:** 
 
 | Modelo                | Acurácia | F1-Score   | Recall     | Precision | ROC AUC |
 | --------------------- | -------- | ---------- | ---------- | --------- | ------- |
@@ -82,7 +81,7 @@ Abaixo estão as métricas pós Oversampling:
 | **Gradient Boosting** | 0.8055   | 0.6145     | **0.7277** | 0.5317    | 0.7771  |
 | **LightGBM**          | 0.8225   | **0.6243** | 0.6925     | 0.5684    | 0.7751  |
 
-
+Através desses experimentos, foi possível identificar que a técnica de RandomOversampling proporcionou as melhores métricas de desempenho para o modelo selecionado (Gradient Boosting), especialmente no que diz respeito ao recall e ao F1-Score.
 
 
 
