@@ -21,33 +21,19 @@ A proposta contempla todas as etapas essenciais de um pipeline moderno de machin
 
 .
 ├── data/                            
-│
-
 ├── model/                          
 │   ├── train.py                    
 │   └── predict.py                  
-│
-
 ├── notebook/                        
 │   └── jupyter_notebook.ipynb      
-│
-
 ├── main.py                         
 ├── modelo_gradientBoost.pkl         
-│
-
 ├── requirements.txt                 
 ├── install.sh                      
-│
-
 ├── dockerfile                       
 ├── .dockerignore                    
-│
-
 ├── .gitignore                      
 ├── .pre-commit-config.yaml          
-│
-
 ├── README.md                        
 └── venv/                            
                     
