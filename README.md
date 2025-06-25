@@ -102,4 +102,23 @@ Abaixo estão os hiperparâmetros utilizados após o uso do Optuna para busca da
 Deixarei a documentação oficial desse framework para estudo:
 https://optuna.org/
 
+
+## Api
+
+**Como rodar:** 
+
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+## Docker
+
+docker build -t modelo-churn-gradient-boosting .
+docker run -d -p 8000:8000 modelo-churn-gradient-boosting
+
+## Dockerfile
+
+![image](https://github.com/user-attachments/assets/2ce3106a-fc82-4b6a-9a7b-d2c0003f3ef2)
+
+
+
+
                    
