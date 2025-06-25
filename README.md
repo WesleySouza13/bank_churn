@@ -84,7 +84,19 @@ Através desses experimentos, foi possível identificar que a técnica de Random
 Através desses experimentos, foi possível identificar que a técnica de RandomOversampling proporcionou as melhores métricas de desempenho para o modelo selecionado (Gradient Boosting), especialmente no que diz respeito ao recall e ao F1-Score.
 
 
+## Hiperparametros do modelo 
+Abaixo estão os hiperparâmetros utilizados após o uso do Optuna para busca das melhores configurações do modelo. 
+**Hiperparametros:**
+{
+  'n_estimators': 117,
+  'min_samples_split': 25,
+  'min_samples_leaf': 23,
+  'max_depth': 18,
+  'max_leaf_nodes': 14,
+  'learning_rate': 0.0811
+}
 
-
+Deixarei a documentação oficial desse framework para estudo:
+https://optuna.org/
 
                    
