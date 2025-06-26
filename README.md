@@ -7,7 +7,7 @@ A proposta contempla todas as etapas essenciais de um pipeline moderno de machin
 
 - Preparação de dados: coleta, limpeza e transformação.
 
-- Desenvolvimento e validação do modelo com abordagem modular.
+- Desenvolvimento e validação do modelo.
 
 - Serialização com joblib. 
 
@@ -112,6 +112,7 @@ python -m uvicorn main:app --host 0.0.0.0 --port 8000
 ## Docker
 
 docker build -t modelo-churn-gradient-boosting .
+
 docker run -d -p 8000:8000 modelo-churn-gradient-boosting
 
 ## Dockerfile
