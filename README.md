@@ -129,6 +129,10 @@ docker build -t modelo-churn-gradient-boosting .
 docker run -d -p 8000:8000 modelo-churn-gradient-boosting
 
 
+## Documentação do Render Cloud
+
+doc: https://render.com/docs
+
 
 
                    
