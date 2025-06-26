@@ -107,17 +107,26 @@ https://optuna.org/
 
 **Como rodar:** 
 
+**Localmente:**
+
+python -m uvicorn main:app --reload --port 8000
+
+**Em cloud**
+
 python -m uvicorn main:app --host 0.0.0.0 --port 8000
 
-## Docker
-
-docker build -t modelo-churn-gradient-boosting .
-
-docker run -d -p 8000:8000 modelo-churn-gradient-boosting
 
 ## Dockerfile
 
 ![image](https://github.com/user-attachments/assets/2ce3106a-fc82-4b6a-9a7b-d2c0003f3ef2)
+
+
+## Criação da Imagem Docker e Run do conteiner
+
+
+docker build -t modelo-churn-gradient-boosting .
+
+docker run -d -p 8000:8000 modelo-churn-gradient-boosting
 
 
 
